@@ -1,20 +1,9 @@
-import React, { useState } from "react";
-
-const Cart = () => {
-  return (
-    <div className="cart">
-      {/* Cart content goes here */}
-    </div>
-  );
-};
+import React from "react";
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
+import { Link } from "react-router-dom";
 
 const Header = () => {
-  const [isCartOpen, setIsCartOpen] = useState(false);
-
-  const handleCartToggle = () => {
-    setIsCartOpen(!isCartOpen);
-  };
-
   return (
     <header>
       <div className="header-container">
@@ -24,15 +13,21 @@ const Header = () => {
 
         <div className="logo-container">
           <h2>GYM CLOTHING</h2>
-          </div>
+        </div>
 
         <nav className="navbar">
           <ul>
-            <li>
-              <a href="#">mens</a>
+          <li>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="#">womens</a>
+              <Link to="/mens">mens</Link>
+            </li>
+            <li>
+              <Link to="/womens">womens</Link>
+            </li>
+            <li>
+              <Link to="/cart"><ShoppingBagIcon /></Link>
             </li>
           </ul>
         </nav>
@@ -42,12 +37,7 @@ const Header = () => {
         <div className="info-container">
           <p>free shipping worldwide</p>
         </div>
-        <div className="cart-container" onClick={handleCartToggle}>
-          <i className="fas fa-shopping-cart"></i>
-        </div>
       </div>
-
-      {isCartOpen && <Cart />}
     </header>
   );
 };

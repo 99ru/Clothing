@@ -5,9 +5,9 @@ import Header from "./components/header/Header";
 import Footer from "./components/Footer/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
-/* import MensPage from "./pages/MensPage";
+import MensPage from "./pages/MensPage";
 import WomensPage from "./pages/WomensPage";
-import CartPage from "./pages/CartPage"; */
+import CartPage from "./pages/CartPage";
 
 function App() {
   return (
@@ -16,9 +16,9 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />
-        {/*   <Route path="/mens" element={<MensPage />} />
+          <Route path="/mens" element={<MensPage />} />
           <Route path="/womens" element={<WomensPage />} />
-          <Route path="/cart" element={<CartPage />} /> */}
+          <Route path="/cart" element={<CartPage />} />
         </Routes>
         <Footer />
       </Router>

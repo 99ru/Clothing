@@ -1,7 +1,6 @@
 
 header{
     width: 100%;
-    //border-bottom: 1px solid rgb(238, 238, 238);
     border-bottom: 1px solid rgb(210, 210, 210);
     box-shadow: 1 white;
     background-color: white;
@@ -21,54 +20,35 @@ header{
     justify-content: space-between;
 
 }
-
 .burger-container{
-
     @media screen and (min-width: 1000px) {  
         display: none;
-
     }
-
     .fa-bars{
         font-size: 1.2rem;
         cursor: pointer;
     }
 }
-
 .logo-container{
-
-    .logo{
-        width: 48px;
-        cursor: pointer;
-    }
+    margin-top: 5rem;
 }
-
-
 
 .shop-container{
     font-size: 1.1rem;
-
     @media screen and (min-width: 1100px) {  
         font-size: 1.3rem;
-
     }
-    
     .fa-shopping-cart{
         cursor: pointer;
     }
 }
-
-
 .navbar{
+    margin-top: 5rem;
     display: none;
-    
-
     @media screen and (min-width: 1000px) {  
         display: block;
 
     }
-
-
     ul{
         list-style: none;
         display: flex;
@@ -77,9 +57,7 @@ header{
 
         li{
             margin: 0 6px;
-            
             a{
-                
                 display: block;
                 padding: 15px 10px;
                 text-decoration: none;
@@ -89,19 +67,12 @@ header{
                 font-weight: 700;
             }
         }
-
         &:hover{
 
             li:hover{
                 border-bottom: 1px solid black;
                
             }
-
-           
-           
-           
         }
-
-        
     }
 }

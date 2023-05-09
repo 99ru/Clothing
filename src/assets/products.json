@@ -2,31 +2,59 @@
   "products": [
     {
       "id": 1,
-      "name": "Mens T-Shirt",
+      "name": "Female top ",
       "price": "$29.99",
       "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
       "image": "../../assets/new1.jpg"
     },
     {
       "id": 2,
-      "name": "Mens T-Shirt 2",
+      "name": "Female top 2",
       "price": "$29.99",
       "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
       "image": "../../assets/new2.jpg"
     },
     {
       "id": 3,
-      "name": "Female Top",
+      "name": "Female Top 3",
       "price": "$19.99",
       "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
       "image": "../../assets/new3.jpg"
     },
     {
       "id": 4,
-      "name": "Female Top 2",
+      "name": "Female top 4",
       "price": "$19.99",
       "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
       "image": "../../assets/new4.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Male T-Shirt 222",
+      "price": "$19.99",
+      "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+      "image": "../../assets/new5.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Male T-Shirt 222",
+      "price": "$19.99",
+      "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+      "image": "../../assets/new6.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Male T-Shirt 222",
+      "price": "$19.99",
+      "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+      "image": "../../assets/new7.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Male T-Shirt 222",
+      "price": "$19.99",
+      "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+      "image": "../../assets/new8.jpg"
     }
   ]
 }
