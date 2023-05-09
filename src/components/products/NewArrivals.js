@@ -1,9 +1,9 @@
 import React from "react";
-import products from '../../assets/products.json';
-import new1 from '../../assets/new1.jpg';
-import new2 from '../../assets/new2.jpg';
-import new3 from '../../assets/new3.jpg';
-import new4 from '../../assets/new4.jpg';
+import products from "../../assets/products.json";
+import new1 from "../../assets/new1.jpg";
+import new2 from "../../assets/new2.jpg";
+import new3 from "../../assets/new3.jpg";
+import new4 from "../../assets/new4.jpg";
 
 const NewArrivals = () => {
   return (
@@ -24,18 +24,10 @@ const NewArrivals = () => {
             <article key={product.id} className="item item-a">
               <div className="item-container__a">
                 <a href="#">
-                  {product.id === 1 && (
-                    <img src={new1} alt="glasses hawkers" />
-                  )}
-                  {product.id === 2 && (
-                    <img src={new2} alt="glasses hawkers" />
-                  )}
-                  {product.id === 3 && (
-                    <img src={new3} alt="glasses hawkers" />
-                  )}
-                  {product.id === 4 && (
-                    <img src={new4} alt="glasses hawkers" />
-                  )}
+                  {product.id === 1 && <img src={new1}  />}
+                  {product.id === 2 && <img src={new2}  />}
+                  {product.id === 3 && <img src={new3}  />}
+                  {product.id === 4 && <img src={new4}  />}
                 </a>
                 <button className="add-to-cart">
                   <i className="fas fa-shopping-cart"></i>

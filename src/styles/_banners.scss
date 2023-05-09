@@ -17,7 +17,6 @@
 
     p {
       font-size: 12px;
-      //letter-spacing: 1px;
     }
   }
 }
@@ -39,7 +38,6 @@
   .release {
     text-transform: uppercase;
     border: 1.2px solid #e3e3e3;
-    //border: 1px solid rgb(210, 210, 210);#e3e3e3
     border-top: none;
     width: 50%;
     display: flex;
@@ -57,10 +55,6 @@
         font-size: 15px;
       }
     }
-  }
-
-  #women-release {
-    border-left: 0;
   }
 }
 
@@ -147,6 +141,4 @@
 .hero-content img {
   width: 50%;
   height: auto;
-  /* margin: 10px; */
-  
 }
