@@ -2,59 +2,99 @@
   "products": [
     {
       "id": 1,
-      "name": "Female top ",
+      "name": "Female top blue ",
       "price": "$29.99",
       "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
-      "image": "../../assets/new1.jpg"
+      "image": "../../assets/new1.jpg",
+      "gender": "Female"
     },
     {
       "id": 2,
-      "name": "Female top 2",
+      "name": "Female top Blue",
       "price": "$29.99",
       "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
-      "image": "../../assets/new2.jpg"
+      "image": "../../assets/new2.jpg",
+      "gender": "Female"
     },
     {
       "id": 3,
-      "name": "Female Top 3",
+      "name": "Female Top Green",
       "price": "$19.99",
       "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
-      "image": "../../assets/new3.jpg"
+      "image": "../../assets/new3.jpg",
+      "gender": "Female"
     },
     {
       "id": 4,
-      "name": "Female top 4",
+      "name": "Female top Pink",
       "price": "$19.99",
       "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
-      "image": "../../assets/new4.jpg"
+      "image": "../../assets/new4.jpg",
+      "gender": "Female"
     },
     {
       "id": 5,
-      "name": "Male T-Shirt 222",
+      "name": "Male T-Shirt Red",
       "price": "$19.99",
       "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
-      "image": "../../assets/new5.jpg"
+      "image": "../../assets/new5.jpg",
+      "gender": "Male"
     },
     {
       "id": 6,
-      "name": "Male T-Shirt 222",
+      "name": "Male T-Shirt White",
       "price": "$19.99",
       "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
-      "image": "../../assets/new6.jpg"
+      "image": "../../assets/new6.jpg",
+      "gender": "Male"
     },
     {
       "id": 7,
-      "name": "Male T-Shirt 222",
+      "name": "Male T-Shirt Black",
       "price": "$19.99",
       "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
-      "image": "../../assets/new7.jpg"
+      "image": "../../assets/new7.jpg",
+      "gender": "Male"
     },
     {
       "id": 8,
-      "name": "Male T-Shirt 222",
+      "name": "Male T-Shirt Green",
       "price": "$19.99",
       "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
-      "image": "../../assets/new8.jpg"
+      "image": "../../assets/new8.jpg",
+      "gender": "Male"
+    },
+    {
+      "id": 9,
+      "name": "Male Long sleeve Black",
+      "price": "$19.99",
+      "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+      "image": "../../assets/new9.jpg",
+      "gender": "Male"
+    },
+    {
+      "id": 10,
+      "name": "Male Long sleeve Green",
+      "price": "$19.99",
+      "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+      "image": "../../assets/new10.jpg",
+      "gender": "Male"
+    },
+    {
+      "id": 11,
+      "name": "Male Long sleeve Blue",
+      "price": "$19.99",
+      "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+      "image": "../../assets/new11.jpg",
+      "gender": "Male"
+    },
+    {
+      "id": 12,
+      "name": "Male Long sleeve Red",
+      "price": "$19.99",
+      "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+      "image": "../../assets/new12.jpg",
+      "gender": "Male"
     }
   ]
 }
