@@ -1,0 +1,32 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Mens T-Shirt",
+      "price": "$29.99",
+      "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+      "image": "../../assets/new1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Mens T-Shirt 2",
+      "price": "$29.99",
+      "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+      "image": "../../assets/new2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Female Top",
+      "price": "$19.99",
+      "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+      "image": "../../assets/new3.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Female Top 2",
+      "price": "$19.99",
+      "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+      "image": "../../assets/new4.jpg"
+    }
+  ]
+}

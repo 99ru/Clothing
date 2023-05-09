@@ -1,0 +1,107 @@
+
+header{
+    width: 100%;
+    //border-bottom: 1px solid rgb(238, 238, 238);
+    border-bottom: 1px solid rgb(210, 210, 210);
+    box-shadow: 1 white;
+    background-color: white;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+
+}
+
+.header-container{
+    width: 90%;
+    margin: 0 auto;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.burger-container{
+
+    @media screen and (min-width: 1000px) {  
+        display: none;
+
+    }
+
+    .fa-bars{
+        font-size: 1.2rem;
+        cursor: pointer;
+    }
+}
+
+.logo-container{
+
+    .logo{
+        width: 48px;
+        cursor: pointer;
+    }
+}
+
+
+
+.shop-container{
+    font-size: 1.1rem;
+
+    @media screen and (min-width: 1100px) {  
+        font-size: 1.3rem;
+
+    }
+    
+    .fa-shopping-cart{
+        cursor: pointer;
+    }
+}
+
+
+.navbar{
+    display: none;
+    
+
+    @media screen and (min-width: 1000px) {  
+        display: block;
+
+    }
+
+
+    ul{
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center ;
+
+        li{
+            margin: 0 6px;
+            
+            a{
+                
+                display: block;
+                padding: 15px 10px;
+                text-decoration: none;
+                color: $black-text;
+                text-transform: uppercase;
+                font-size: 14px;
+                font-weight: 700;
+            }
+        }
+
+        &:hover{
+
+            li:hover{
+                border-bottom: 1px solid black;
+               
+            }
+
+           
+           
+           
+        }
+
+        
+    }
+}
