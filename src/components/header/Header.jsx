@@ -1,6 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
+
+const Cart = () => {
+  return (
+    <div className="cart">
+      {/* Cart content goes here */}
+    </div>
+  );
+};
 
 const Header = () => {
+  const [isCartOpen, setIsCartOpen] = useState(false);
+
+  const handleCartToggle = () => {
+    setIsCartOpen(!isCartOpen);
+  };
+
   return (
     <header>
       <div className="header-container">
@@ -28,7 +42,12 @@ const Header = () => {
         <div className="info-container">
           <p>free shipping worldwide</p>
         </div>
+        <div className="cart-container" onClick={handleCartToggle}>
+          <i className="fas fa-shopping-cart"></i>
+        </div>
       </div>
+
+      {isCartOpen && <Cart />}
     </header>
   );
 };
