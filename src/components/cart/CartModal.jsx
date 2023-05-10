@@ -34,7 +34,7 @@ const CartModal = ({ closeModal }) => {
           <i className="fas fa-times"></i>
         </button>
         {cartItems.map((item) => (
-          <div className="cart-item-container">
+          <div key={item.id} className="cart-item-container">
             <div key={item.id} className="cart-item">
               <img src={item.image} alt={item.name} />
               <div className="item-info">
