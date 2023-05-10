@@ -11,8 +11,8 @@ body {
 }
 
 header{
-  background-color: #ffffff;
-  border-bottom: #0c0c0c10 0.5px solid;
+  background-color:whitesmoke;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .hero img {
@@ -23,8 +23,17 @@ header{
 }
 
 .footer {
-  background-color: #f7f7f7d0;
+  background-color: whitesmoke;
   padding: 30px;
   text-align: center;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.817);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.href{
+  text-decoration: none;
+  color: black;
+  border-bottom: #0c0c0cf3 0.5px solid;
 }
 

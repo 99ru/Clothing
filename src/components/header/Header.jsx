@@ -2,9 +2,9 @@ import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import logo from "../../assets/logo.svg";
-import logo2 from "../../assets/Asset 3.png"
 import CartModal from "../../components/cart/CartModal";
 import { CartContext } from "../../CartContext";
+import ClearIcon from '@mui/icons-material/Clear';
 
 const Header = () => {
   const [cartOpen, setCartOpen] = useState(false);
@@ -42,7 +42,7 @@ const Header = () => {
         <div className="cart-modal-container">
           <div className="cart-modal">
             <button className="close-btn" onClick={handleCartClose}>
-              X
+            <ClearIcon />
             </button>
             {cartOpen && <CartModal cartItems={cartItems} closeModal={handleCartClose} />}
           </div>

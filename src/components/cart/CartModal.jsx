@@ -1,3 +1,4 @@
+import DeleteIcon from '@mui/icons-material/Delete';
 import React, { useContext } from "react";
 import { CartContext } from "../../CartContext";
 
@@ -40,14 +41,19 @@ const CartModal = ({ closeModal }) => {
                 <h3>{item.name}</h3>
                 <p>{item.price}</p>
               </div>
+              <div type="button" className="remove-from-cart-btn" onClick={() => removeFromCart(item.id)}>
+                <DeleteIcon />
+              </div>
               <div className="item-controls">
               <button onClick={() => decreaseQuantity(item.id)}>-</button>
               <span>{item.quantity}</span>
               <button onClick={() => increaseQuantity(item.id)}>+</button>
-              <button className="remove-from-cart-btn" onClick={() => removeFromCart(item.id)}>Delete</button>
+              
               </div>
             </div>
+            
           </div>
+          
         ))}
       </div>
     </div>

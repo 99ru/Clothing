@@ -5,8 +5,8 @@ const Footer = () => {
     <div className="footer">
       <div className="footer-content">
         <p>© 2023 | Alphalete Athletics CLONE | THIS IS NOT A REAL PAGE</p>
-        <h3>LEARN MORE | DREAM MORE | BE MORE</h3>
-        <a href="https://alphaleteathletics.com/">Real Website</a>
+        <p>LEARN MORE | DREAM MORE | BE MORE</p>
+        <a className="href" href="https://alphaleteathletics.com/">Real Website</a>
       </div>
     </div>
   );
