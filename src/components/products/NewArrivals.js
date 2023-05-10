@@ -1,10 +1,18 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import products from "../../assets/products.json";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { CartContext } from "../../CartContext";
 
 const NewArrivals = () => {
   const { addToCart } = useContext(CartContext);
+  const [scale, setScale] = useState(false);
+
+const triggerScaleAnimation = () => {
+  setScale(true);
+  setTimeout(() => {
+    setScale(false);
+  }, 300);
+};
 
   const latestProducts = products.products.slice(-8).reverse();
 
