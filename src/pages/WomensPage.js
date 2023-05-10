@@ -1,10 +1,10 @@
 import React from "react";
+import FemaleClothing from "../components/products/FemaleClothing";
 
 const WomensPage = () => {
   return (
     <div>
-      <h1>Womens Page</h1>
-      {/* Add your womens clothing component here */}
+      <FemaleClothing />
     </div>
   );
 };

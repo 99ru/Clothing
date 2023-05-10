@@ -1,13 +1,5 @@
 import React, { useState } from "react";
 import products from "../../assets/products.json";
-import new1 from "../../assets/new1.jpg";
-import new2 from "../../assets/new2.jpg";
-import new3 from "../../assets/new3.jpg";
-import new4 from "../../assets/new4.jpg";
-import new5 from "../../assets/new5.jpg";
-import new6 from "../../assets/new6.jpg";
-import new7 from "../../assets/new7.jpg";
-import new8 from "../../assets/new8.jpg";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 const NewArrivals = () => {
@@ -16,6 +8,16 @@ const NewArrivals = () => {
   const addToCart = (product) => {
     setCart([...cart, product]);
   };
+
+  // Get 4 latest female products
+  const femaleProducts = products.products
+    .filter((product) => product.gender === "Female")
+    .slice(0, 4);
+
+  // Get 4 latest male products
+  const maleProducts = products.products
+    .filter((product) => product.gender === "Male")
+    .slice(0, 4);
 
   return (
     <div>
@@ -29,18 +31,11 @@ const NewArrivals = () => {
         </div>
 
         <section className="items-wrapper">
-          {products.products.map((product) => (
+          {[...femaleProducts, ...maleProducts].map((product) => (
             <article key={product.id} className="item item-a">
               <div className="item-container__a">
                 <a>
-                  {product.id === 1 && <img src={new1} />}
-                  {product.id === 2 && <img src={new2} />}
-                  {product.id === 3 && <img src={new3} />}
-                  {product.id === 4 && <img src={new4} />}
-                  {product.id === 5 && <img src={new5} />}
-                  {product.id === 6 && <img src={new6} />}
-                  {product.id === 7 && <img src={new7} />}
-                  {product.id === 8 && <img src={new8} />}
+                  <img src={product.image} alt={product.name} />
                 </a>
                 <button
                   key={product.id}

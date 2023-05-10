@@ -1,29 +1,31 @@
+
 import React, { useState } from "react";
 import products from "../../assets/products.json";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
-const MensClothing = () => {
+const FemaleClothing = () => {
   const [cart, setCart] = useState([]);
 
   const addToCart = (product) => {
     setCart([...cart, product]);
   };
 
-  const mensProducts = products.products.filter(
-    (product) => product.gender === "Male"
+  const femaleProducts = products.products.filter(
+    (product) => product.gender === "Female"
   );
 
   return (
     <div>
       <section className="shop">
-        <div className="shop-header" id="cw2">
+
+        <div className="shop-header" id="cw3">
           <div className="shop-title">
-            <h1>Men's Clothing</h1>
+            <h1>Women's Clothing</h1>
           </div>
         </div>
 
         <section className="items-wrapper">
-          {mensProducts.map((product) => (
+          {femaleProducts.map((product) => (
             <article key={product.id} className="item item-a">
               <div className="item-container__a">
                 <a>
@@ -51,4 +53,4 @@ const MensClothing = () => {
   );
 };
 
-export default MensClothing;
+export default FemaleClothing;

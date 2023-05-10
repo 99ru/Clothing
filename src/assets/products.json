@@ -5,7 +5,7 @@
       "name": "Female top blue ",
       "price": "$29.99",
       "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
-      "image": "../../assets/new1.jpg",
+      "image": "https://cdn.shopify.com/s/files/1/0667/0133/products/StratusCropTankSapphire1_1000x.jpg?v=1679349787",
       "gender": "Female"
     },
     {
@@ -13,7 +13,7 @@
       "name": "Female top Blue",
       "price": "$29.99",
       "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
-      "image": "../../assets/new2.jpg",
+      "image": "https://cdn.shopify.com/s/files/1/0667/0133/products/RevivalBraSapphire1_1000x.jpg?v=1679350014",
       "gender": "Female"
     },
     {
@@ -21,7 +21,7 @@
       "name": "Female Top Green",
       "price": "$19.99",
       "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
-      "image": "../../assets/new3.jpg",
+      "image": "https://cdn.shopify.com/s/files/1/0667/0133/products/RevivalBraJade1_1000x.jpg?v=1679349897",
       "gender": "Female"
     },
     {
@@ -29,7 +29,7 @@
       "name": "Female top Pink",
       "price": "$19.99",
       "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
-      "image": "../../assets/new4.jpg",
+      "image": "https://cdn.shopify.com/s/files/1/0667/0133/products/RevivalBraMagenta1_1000x.jpg?v=1679349914",
       "gender": "Female"
     },
     {
@@ -37,7 +37,7 @@
       "name": "Male T-Shirt Red",
       "price": "$19.99",
       "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
-      "image": "../../assets/new5.jpg",
+      "image": "https://cdn.shopify.com/s/files/1/0667/0133/products/CollegiateOversizedTeeSangria8_1000x.jpg?v=1679100729",
       "gender": "Male"
     },
     {
@@ -45,7 +45,7 @@
       "name": "Male T-Shirt White",
       "price": "$19.99",
       "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
-      "image": "../../assets/new6.jpg",
+      "image": "https://cdn.shopify.com/s/files/1/0667/0133/products/CollegiateOversizedTeeSeaShell4_1000x.jpg?v=1679100737",
       "gender": "Male"
     },
     {
@@ -53,7 +53,7 @@
       "name": "Male T-Shirt Black",
       "price": "$19.99",
       "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
-      "image": "../../assets/new7.jpg",
+      "image": "https://cdn.shopify.com/s/files/1/0667/0133/products/CollegiateOversizedTeeBlack4_1000x.jpg?v=1679100709",
       "gender": "Male"
     },
     {
@@ -61,7 +61,7 @@
       "name": "Male T-Shirt Green",
       "price": "$19.99",
       "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
-      "image": "../../assets/new8.jpg",
+      "image": "https://cdn.shopify.com/s/files/1/0667/0133/products/CollegiateOversizedTeeEvergreen6_1000x.jpg?v=1679100720",
       "gender": "Male"
     },
     {
@@ -69,7 +69,7 @@
       "name": "Male Long sleeve Black",
       "price": "$19.99",
       "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
-      "image": "../../assets/new9.jpg",
+      "image": "https://cdn.shopify.com/s/files/1/0667/0133/products/image_1136fe97-8888-4691-bc81-8495a128abfe_1000x.jpg?v=1657125032",
       "gender": "Male"
     },
     {
@@ -77,7 +77,7 @@
       "name": "Male Long sleeve Green",
       "price": "$19.99",
       "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
-      "image": "../../assets/new10.jpg",
+      "image": "https://cdn.shopify.com/s/files/1/0667/0133/products/image_63bff656-1b1b-4113-b502-1bc8821fbe3f_1000x.jpg?v=1657320144",
       "gender": "Male"
     },
     {
@@ -85,7 +85,7 @@
       "name": "Male Long sleeve Blue",
       "price": "$19.99",
       "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
-      "image": "../../assets/new11.jpg",
+      "image": "https://cdn.shopify.com/s/files/1/0667/0133/products/image_d9d2a526-c210-4507-b912-369a43f88c24_1000x.jpg?v=1657319733",
       "gender": "Male"
     },
     {
@@ -93,8 +93,40 @@
       "name": "Male Long sleeve Red",
       "price": "$19.99",
       "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
-      "image": "../../assets/new12.jpg",
+      "image": "https://cdn.shopify.com/s/files/1/0667/0133/products/image_65dff2ce-6184-4e54-9f34-92c196955dc1_1000x.jpg?v=1657125490",
       "gender": "Male"
+    },
+    {
+      "id": 13,
+      "name": "Female long sleeve Purple",
+      "price": "$19.99",
+      "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+      "image": "https://cdn.shopify.com/s/files/1/0667/0133/products/4U8A7478_1000x.jpg?v=1645146189",
+      "gender": "Female"
+    },
+    {
+      "id": 14,
+      "name": "Female long sleeve Orange",
+      "price": "$19.99",
+      "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+      "image": "https://cdn.shopify.com/s/files/1/0667/0133/products/4U8A4787_1000x.jpg?v=1639118647",
+      "gender": "Female"
+    },
+    {
+      "id": 15,
+      "name": "Female long sleeve Green",
+      "price": "$19.99",
+      "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+      "image": "https://cdn.shopify.com/s/files/1/0667/0133/products/4U8A4820_f92a12c4-7485-4392-b2be-95ee8aa15d44_1000x.jpg?v=1639118567",
+      "gender": "Female"
+    },
+    {
+      "id": 16,
+      "name": "Female crop long sleeve Green",
+      "price": "$19.99",
+      "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+      "image": "https://cdn.shopify.com/s/files/1/0667/0133/products/StratusLSCropJade1_1000x.jpg?v=1679349558",
+      "gender": "Female"
     }
   ]
 }
