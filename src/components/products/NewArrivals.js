@@ -5,15 +5,6 @@ import { CartContext } from "../../CartContext";
 
 const NewArrivals = () => {
   const { addToCart } = useContext(CartContext);
-  const [scale, setScale] = useState(false);
-
-const triggerScaleAnimation = () => {
-  setScale(true);
-  setTimeout(() => {
-    setScale(false);
-  }, 300);
-};
-
   const latestProducts = products.products.slice(-8).reverse();
 
   return (
@@ -24,7 +15,7 @@ const triggerScaleAnimation = () => {
             <h2>Check out our</h2>
             <p>new releases</p>
           </div>
-          <a className="view">View all</a>
+          <p className="view">View all</p>
         </div>
 
         <section className="items-wrapper">

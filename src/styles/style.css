@@ -16,10 +16,7 @@ header{
 }
 
 .hero img {
-  -o-object-fit: cover;
-     object-fit: cover;
-     height: fill;
-    
+    object-fit: cover;  
 }
 
 .footer {
