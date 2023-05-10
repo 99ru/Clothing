@@ -1,14 +1,13 @@
 
-import React, { useState } from "react";
+import React, { useContext } from "react";
+import { CartContext } from "../../CartContext";
+
 import products from "../../assets/products.json";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 const FemaleClothing = () => {
-  const [cart, setCart] = useState([]);
+  const { addToCart } = useContext(CartContext);
 
-  const addToCart = (product) => {
-    setCart([...cart, product]);
-  };
 
   const femaleProducts = products.products.filter(
     (product) => product.gender === "Female"

@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import logo from "../../assets/logo.svg";
+import logo2 from "../../assets/Asset 3.png"
 import CartModal from "../../components/cart/CartModal";
 import { CartContext } from "../../CartContext";
 
