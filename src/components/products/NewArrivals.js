@@ -1,23 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import products from "../../assets/products.json";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { CartContext } from "../../CartContext";
 
 const NewArrivals = () => {
-  const [cart, setCart] = useState([]);
+  const { addToCart } = useContext(CartContext);
 
-  const addToCart = (product) => {
-    setCart([...cart, product]);
-  };
-
-  // Get 4 latest female products
-  const femaleProducts = products.products
-    .filter((product) => product.gender === "Female")
-    .slice(0, 4);
-
-  // Get 4 latest male products
-  const maleProducts = products.products
-    .filter((product) => product.gender === "Male")
-    .slice(0, 4);
+  const latestProducts = products.products.slice(-8).reverse();
 
   return (
     <div>
@@ -31,14 +20,13 @@ const NewArrivals = () => {
         </div>
 
         <section className="items-wrapper">
-          {[...femaleProducts, ...maleProducts].map((product) => (
+          {latestProducts.map((product) => (
             <article key={product.id} className="item item-a">
               <div className="item-container__a">
                 <a>
                   <img src={product.image} alt={product.name} />
                 </a>
                 <button
-                  key={product.id}
                   className="add-to-cart"
                   onClick={() => addToCart(product)}
                 >

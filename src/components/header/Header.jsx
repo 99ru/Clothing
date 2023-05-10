@@ -1,23 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import logo from "../../assets/logo.svg";
 import CartModal from "../../components/cart/CartModal";
+import { CartContext } from "../../CartContext";
 
 const Header = () => {
+  const [cartOpen, setCartOpen] = useState(false);
+  const { cartItems } = useContext(CartContext); // Get cartItems from the CartContext
 
-  const [isCartOpen, setIsCartOpen] = useState(false);
-  const cart = []; // your cart data
-
-  const toggleCart = () => {
-    setIsCartOpen(!isCartOpen);
-  }
-
+  const handleCartOpen = () => {
+    setCartOpen(true);
+  };
+  const handleCartClose = () => {
+    setCartOpen(false);
+  };
 
   return (
     <header>
       <div className="header-container">
-          <img src={logo} alt="logo" />
+        <img src={logo} alt="logo" />
         <nav className="navbar">
           <ul>
             <li>
@@ -30,19 +32,21 @@ const Header = () => {
               <Link to="/womens">Womens</Link>
             </li>
             <li>
-             <button className="header-cart" onClick={toggleCart}>
-                <ShoppingCartIcon />
-              </button>
+              <ShoppingBagIcon onClick={handleCartOpen} />
             </li>
           </ul>
         </nav>
-
-       
-
-        <CartModal isOpen={isCartOpen} toggle={toggleCart} cart={cart} />
       </div>
-
-      
+      {cartOpen && (
+        <div className="cart-modal-container">
+          <div className="cart-modal">
+            <button className="close-btn" onClick={handleCartClose}>
+              CLOSE
+            </button>
+            {cartOpen && <CartModal cartItems={cartItems} closeModal={handleCartClose} />}
+          </div>
+        </div>
+      )}
     </header>
   );
 };
