@@ -41,7 +41,7 @@ const Header = () => {
         <div className="cart-modal-container">
           <div className="cart-modal">
             <button className="close-btn" onClick={handleCartClose}>
-              CLOSE
+              X
             </button>
             {cartOpen && <CartModal cartItems={cartItems} closeModal={handleCartClose} />}
           </div>
