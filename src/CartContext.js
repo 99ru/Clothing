@@ -2,43 +2,65 @@ import React, { createContext, useState, useEffect } from "react";
 
 export const CartContext = createContext();
 
+const saveCartToLocalStorage = (cart) => {
+  localStorage.setItem("cart", JSON.stringify(cart));
+};
+
 export const CartProvider = (props) => {
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState(() => {
+    const savedCart = localStorage.getItem("cart");
+    return savedCart ? JSON.parse(savedCart) : [];
+  });
 
   const addToCart = (item) => {
-    const existingItem = cartItems.find((cartItem) => cartItem.id === item.id);
-  
-    if (existingItem) {
-      // Update the quantity of the existing item
-      updateQuantity(item.id, existingItem.quantity + 1);
-    } else {
-      // Add the new item with an initial quantity of 1
-      setCartItems([...cartItems, { ...item, quantity: 1 }]);
-    }
+    setCartItems((prevItems) => {
+      const existingItem = prevItems.find(
+        (cartItem) => cartItem.id === item.id
+      );
+
+      let updatedCart;
+      if (existingItem) {
+        updatedCart = prevItems.map((cartItem) =>
+          cartItem.id === item.id
+            ? { ...cartItem, quantity: cartItem.quantity + 1 }
+            : cartItem
+        );
+      } else {
+        updatedCart = [...prevItems, { ...item, quantity: 1 }];
+      }
+
+      saveCartToLocalStorage(updatedCart);
+      return updatedCart;
+    });
   };
 
   const removeFromCart = (itemId) => {
-    setCartItems(cartItems.filter((item) => item.id !== itemId));
+    setCartItems((prevItems) => {
+      const updatedCart = prevItems.filter((item) => item.id !== itemId);
+      saveCartToLocalStorage(updatedCart);
+      return updatedCart;
+    });
   };
 
   const updateQuantity = (itemId, newQuantity) => {
-    setCartItems((prevItems) =>
-      prevItems.map((item) =>
+    setCartItems((prevItems) => {
+      const updatedCart = prevItems.map((item) =>
         item.id === itemId ? { ...item, quantity: newQuantity } : item
-      )
-    );
+      );
+      saveCartToLocalStorage(updatedCart);
+      return updatedCart;
+    });
   };
 
-  // Add this useEffect hook to log cartItems whenever it updates
   useEffect(() => {
-    console.log('Current cart items:', cartItems);
+    console.log("Current cart items:", cartItems);
   }, [cartItems]);
 
   return (
-    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, updateQuantity  }}>
+    <CartContext.Provider
+      value={{ cartItems, addToCart, removeFromCart, updateQuantity }}
+    >
       {props.children}
     </CartContext.Provider>
   );
 };
-
-
