@@ -22,7 +22,11 @@
   }
 }
 
-.hero-content img {
-  width: 50%;
-  height: auto;
+.hero-content {
+  border-top: 1px solid #000000;
+
+  img {
+    width: 50%;
+    height: auto;
+  }
 }

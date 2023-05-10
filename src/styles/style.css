@@ -10,6 +10,10 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+header{
+  background-color: #f7f7f7d0;
+}
+
 .hero img {
   -o-object-fit: cover;
      object-fit: cover;

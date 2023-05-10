@@ -5,12 +5,9 @@ import logo from "../../assets/logo.svg";
 
 const Header = () => {
   return (
-    <header className="header">
+    <header>
       <div className="header-container">
-        <div className="logo-container">
           <img src={logo} alt="logo" />
-        </div>
-
         <nav className="navbar">
           <ul>
             <li>
