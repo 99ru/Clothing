@@ -22,7 +22,7 @@ const NewArrivals = () => {
           {latestProducts.map((product) => (
             <article key={product.id} className="item item-a">
               <div className="item-container__a">
-                <a>
+                <a href="#">
                   <img src={product.image} alt={product.name} />
                 </a>
                 <button
@@ -34,7 +34,7 @@ const NewArrivals = () => {
               </div>
               <div className="item-container__b">
                 <h3>
-                  <a>{product.name}</a>
+                  <a href="#">{product.name}</a>
                 </h3>
                 <p>{product.price}</p>
               </div>
