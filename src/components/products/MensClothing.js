@@ -24,9 +24,9 @@ const MensClothing = () => {
           {mensProducts.map((product) => (
             <article key={product.id} className="item item-a">
               <div className="item-container__a">
-                <a>
+                <p>
                   <img src={product.image} alt={product.name} />
-                </a>
+                </p>
                 <button
                   key={product.id}
                   className="add-to-cart"
@@ -37,7 +37,7 @@ const MensClothing = () => {
               </div>
               <div className="item-container__b">
                 <h3>
-                  <a>{product.name}</a>
+                  <p>{product.name}</p>
                 </h3>
                 <p>{product.price}</p>
               </div>
