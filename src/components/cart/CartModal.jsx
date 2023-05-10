@@ -32,7 +32,6 @@ const CartModal = ({ closeModal }) => {
           <h3>Total: ${calculateTotal().toFixed(2)}</h3>
         </div>
         <button className="close-btn" onClick={closeModal}>
-          {/* <i className="fas fa-times"></i> */}
           <ClearIcon />
         </button>
         {cartItems.map((item) => (
