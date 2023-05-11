@@ -1,12 +1,12 @@
 // src/pages/HomePage.js
 import React from "react";
-import Category from "../components/category/category";
+import Hero from "../components/hero/video";
 import NewArrivals from "../components/products/NewArrivals";
 
 const HomePage = () => {
   return (
     <>
-      <Category />
+      <Hero />
       <NewArrivals />
     </>
   );

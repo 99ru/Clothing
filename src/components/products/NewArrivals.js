@@ -15,7 +15,7 @@ const NewArrivals = () => {
             <h2>Check out our</h2>
             <p>new releases</p>
           </div>
-          <p className="view">View all</p>
+          {/* <p className="view">View all</p> */}
         </div>
 
         <section className="items-wrapper">
