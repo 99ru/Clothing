@@ -36,35 +36,37 @@ const CartModal = ({ closeModal }) => {
         </button>
         {cartItems.length === 0 ? (
           <div className="empty-cart-message">
-            <h2>Cart is empty</h2>
+            <h2>Your shopping bag is empty</h2>
           </div>
         ) : (
-          cartItems.map((item) => (
-            <div key={item.id} className="cart-item-container">
-              <div className="total-container">
-                <h3>Total: ${calculateTotal().toFixed(2)}</h3>
+          <>
+            {cartItems.map((item) => (
+              <div key={item.id} className="cart-item-container">
+                <div key={item.id} className="cart-item">
+                  <img src={item.image} alt={item.name} />
+                  <div className="item-info">
+                    <h3>{item.name}</h3>
+                    <p>{item.price}</p>
+                  </div>
+                  <div
+                    type="button"
+                    className="remove-from-cart-btn"
+                    onClick={() => removeFromCart(item.id)}
+                  >
+                    <DeleteIcon />
+                  </div>
+                  <div className="item-controls">
+                    <button onClick={() => decreaseQuantity(item.id)}>-</button>
+                    <span>{item.quantity}</span>
+                    <button onClick={() => increaseQuantity(item.id)}>+</button>
+                  </div>
+                </div>
               </div>
-              <div key={item.id} className="cart-item">
-                <img src={item.image} alt={item.name} />
-                <div className="item-info">
-                  <h3>{item.name}</h3>
-                  <p>{item.price}</p>
-                </div>
-                <div
-                  type="button"
-                  className="remove-from-cart-btn"
-                  onClick={() => removeFromCart(item.id)}
-                >
-                  <DeleteIcon />
-                </div>
-                <div className="item-controls">
-                  <button onClick={() => decreaseQuantity(item.id)}>-</button>
-                  <span>{item.quantity}</span>
-                  <button onClick={() => increaseQuantity(item.id)}>+</button>
-                </div>
-              </div>
+            ))}
+            <div className="total-container">
+              <h3>Total: ${calculateTotal().toFixed(2)}</h3>
             </div>
-          ))
+          </>
         )}
       </div>
     </div>
