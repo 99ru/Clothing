@@ -2,7 +2,6 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import ClearIcon from "@mui/icons-material/Clear";
 import React, { useContext } from "react";
 import { CartContext } from "../../CartContext";
-import { ShoppingCart } from "@mui/icons-material";
 
 const CartModal = ({ closeModal }) => {
   const { cartItems, removeFromCart, updateQuantity } = useContext(CartContext);
