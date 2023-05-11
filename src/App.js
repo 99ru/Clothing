@@ -18,8 +18,8 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/mens" element={<MensPage />} />
-            <Route path="/womens" element={<WomensPage />} />
+            <Route path="/men" element={<MensPage />} />
+            <Route path="/women" element={<WomensPage />} />
           </Routes>
           <Footer />
         </Router>

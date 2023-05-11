@@ -13,6 +13,9 @@ const Hero = () => {
           playsInline
           className="hero-video"
         />
+        <div className="hero-text">
+          <h3>LEARN MORE | DREAM MORE | BE MORE</h3>
+        </div>
       </div>
     </div>
   );
