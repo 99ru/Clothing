@@ -1,7 +1,8 @@
-import DeleteIcon from '@mui/icons-material/Delete';
-import ClearIcon from '@mui/icons-material/Clear';
+import DeleteIcon from "@mui/icons-material/Delete";
+import ClearIcon from "@mui/icons-material/Clear";
 import React, { useContext } from "react";
 import { CartContext } from "../../CartContext";
+import { ShoppingCart } from "@mui/icons-material";
 
 const CartModal = ({ closeModal }) => {
   const { cartItems, removeFromCart, updateQuantity } = useContext(CartContext);
@@ -14,7 +15,10 @@ const CartModal = ({ closeModal }) => {
   };
 
   const increaseQuantity = (itemId) => {
-    updateQuantity(itemId, cartItems.find((item) => item.id === itemId).quantity + 1);
+    updateQuantity(
+      itemId,
+      cartItems.find((item) => item.id === itemId).quantity + 1
+    );
   };
 
   const calculateTotal = () => {
@@ -28,34 +32,41 @@ const CartModal = ({ closeModal }) => {
   return (
     <div className="cart-modal-container">
       <div className="cart-modal">
-        <div className="total-container">
-          <h3>Total: ${calculateTotal().toFixed(2)}</h3>
-        </div>
         <button className="close-btn" onClick={closeModal}>
           <ClearIcon />
         </button>
-        {cartItems.map((item) => (
-          <div key={item.id} className="cart-item-container">
-            <div key={item.id} className="cart-item">
-              <img src={item.image} alt={item.name} />
-              <div className="item-info">
-                <h3>{item.name}</h3>
-                <p>{item.price}</p>
+        {cartItems.length === 0 ? (
+          <div className="empty-cart-message">
+            <h2>Cart is empty</h2>
+          </div>
+        ) : (
+          cartItems.map((item) => (
+            <div key={item.id} className="cart-item-container">
+              <div className="total-container">
+                <h3>Total: ${calculateTotal().toFixed(2)}</h3>
               </div>
-              <div type="button" className="remove-from-cart-btn" onClick={() => removeFromCart(item.id)}>
-                <DeleteIcon />
-              </div>
-              <div className="item-controls">
-              <button onClick={() => decreaseQuantity(item.id)}>-</button>
-              <span>{item.quantity}</span>
-              <button onClick={() => increaseQuantity(item.id)}>+</button>
-              
+              <div key={item.id} className="cart-item">
+                <img src={item.image} alt={item.name} />
+                <div className="item-info">
+                  <h3>{item.name}</h3>
+                  <p>{item.price}</p>
+                </div>
+                <div
+                  type="button"
+                  className="remove-from-cart-btn"
+                  onClick={() => removeFromCart(item.id)}
+                >
+                  <DeleteIcon />
+                </div>
+                <div className="item-controls">
+                  <button onClick={() => decreaseQuantity(item.id)}>-</button>
+                  <span>{item.quantity}</span>
+                  <button onClick={() => increaseQuantity(item.id)}>+</button>
+                </div>
               </div>
             </div>
-            
-          </div>
-          
-        ))}
+          ))
+        )}
       </div>
     </div>
   );

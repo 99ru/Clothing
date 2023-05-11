@@ -1,10 +1,11 @@
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
-import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
+import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 import logo from "../../assets/logo.svg";
 import CartModal from "../../components/cart/CartModal";
 import { CartContext } from "../../CartContext";
-import ClearIcon from '@mui/icons-material/Clear';
+import ClearIcon from "@mui/icons-material/Clear";
+import Badge from "@mui/material/Badge";
 
 const Header = () => {
   const [cartOpen, setCartOpen] = useState(false);
@@ -20,7 +21,9 @@ const Header = () => {
   return (
     <header>
       <div className="header-container">
-        <Link to="/"><img src={logo} alt="logo" /></Link>
+        <Link to="/">
+          <img src={logo} alt="logo" />
+        </Link>
         <nav className="navbar">
           <ul>
             <li>
@@ -32,8 +35,16 @@ const Header = () => {
             <li>
               <Link to="/womens">Womens</Link>
             </li>
-            <li>
-              <ShoppingBagIcon onClick={handleCartOpen} />
+            <li className="shopping-bag">
+              <Badge
+                badgeContent={cartItems.reduce(
+                  (total, item) => total + item.quantity,
+                  0
+                )}
+                color="primary"
+              >
+                <ShoppingBagIcon onClick={handleCartOpen} />
+              </Badge>
             </li>
           </ul>
         </nav>
@@ -42,9 +53,11 @@ const Header = () => {
         <div className="cart-modal-container">
           <div className="cart-modal">
             <button className="close-btn" onClick={handleCartClose}>
-            <ClearIcon />
+              <ClearIcon />
             </button>
-            {cartOpen && <CartModal cartItems={cartItems} closeModal={handleCartClose} />}
+            {cartOpen && (
+              <CartModal cartItems={cartItems} closeModal={handleCartClose} />
+            )}
           </div>
         </div>
       )}
