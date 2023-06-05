@@ -35,7 +35,7 @@ const FemaleClothing = () => {
                   className="add-to-cart"
                   onClick={() => addToCart(product)}
                 >
-                  <ShoppingCartIcon />
+                   <ShoppingCartIcon className="shopping-cart-icon"/>
                 </button>
               </div>
               <div className="item-container__b">

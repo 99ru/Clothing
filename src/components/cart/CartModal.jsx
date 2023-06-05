@@ -45,7 +45,7 @@ const CartModal = ({ closeModal }) => {
                 <div key={item.id} className="cart-item">
                   <img src={item.image} alt={item.name} />
                   <div className="item-info">
-                    <h3>{item.name}</h3>
+                    <h4>{item.name}</h4>
                     <p>{item.price}</p>
                   </div>
                   <div

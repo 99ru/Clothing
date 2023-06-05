@@ -1,50 +1,23 @@
 .shop {
   width: 92%;
-  margin: 18px auto 0 auto;
+  margin: 1rem auto 0 auto;
   padding-top: 1rem;
-
-  @media screen and (min-width: 740px) {
-    margin-top: 35px;
-  }
-
-  @media screen and (min-width: 1500px) {
-    width: 90%;
-    margin: 40px auto 0 auto;
-  }
 }
 
 .shop-header {
   width: 100%;
-  margin-bottom: 30px;
-
-  a {
-    font-size: 16px;
-    font-weight: 700;
-  }
-
-  @media screen and (min-width: 740px) {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 25px;
-  }
+  margin-bottom: 25px;
+  padding-top: 5rem;
+}
+#cw1 {
+  padding-top: 0rem;
 }
 
 .shop-title {
   text-transform: uppercase;
 
-  h2 {
-    color: #53565a;
-    font-size: 14px;
-    font-weight: 700;
-  }
-
-  p {
-    font-size: 20px;
-    font-weight: 700;
-
-    @media screen and (min-width: 740px) {
-      font-size: 25px;
-    }
+  @media (max-width: 900px) {
+    font-size: 0.7rem;
   }
 }
 
@@ -59,13 +32,11 @@
 .items-wrapper {
   display: grid;
   grid-template-columns: auto auto;
-  grid-gap: 0.6rem;
-  padding: 3rem;
-
+  grid-gap: 2rem;
+  padding-bottom: 2rem;
   @media screen and (min-width: 740px) {
     grid-template-columns: auto auto auto;
   }
-
   @media screen and (min-width: 990px) {
     grid-template-columns: auto auto auto auto;
   }
@@ -73,10 +44,8 @@
 
 .item-container__a {
   position: relative;
-
   p {
     display: block;
-
     img {
       width: 100%;
       display: block;
@@ -87,17 +56,18 @@
 .add-to-cart {
   cursor: pointer;
   position: absolute;
+  height: 30px;
+  width: 30px;
   right: 10px;
   bottom: 10px;
   padding: 5px;
-  width: 35px;
-  height: 35px;
   border: none;
   background-color: transparent;
   box-shadow: rgba(0, 0, 0, 0%);
-
-  i {
-    color: rgb(59, 59, 59);
+  transition: box-shadow 0.3s ease;
+  &:active {
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px 0px;
+    color: rgb(38, 161, 255);
   }
 }
 
@@ -105,7 +75,6 @@
   h3 {
     margin-bottom: 5px;
     margin-top: 4px;
-
     p {
       text-transform: capitalize;
       text-decoration: none;

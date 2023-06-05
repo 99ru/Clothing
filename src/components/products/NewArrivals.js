@@ -12,8 +12,8 @@ const NewArrivals = () => {
       <section className="shop">
         <div className="shop-header" id="cw1">
           <div className="shop-title">
-            <h2>Check out our</h2>
-            <p>new releases</p>
+            <h4>Check out our</h4>
+            <h1>New Releases</h1>
           </div>
           {/* <p className="view">View all</p> */}
         </div>
@@ -29,7 +29,7 @@ const NewArrivals = () => {
                   className="add-to-cart"
                   onClick={() => addToCart(product)}
                 >
-                  <ShoppingCartIcon />
+                   <ShoppingCartIcon className="shopping-cart-icon"/>
                 </button>
               </div>
               <div className="item-container__b">
