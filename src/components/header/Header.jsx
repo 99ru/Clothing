@@ -27,45 +27,44 @@ const Header = () => {
   return (
     <header>
       <div className="header-container">
-  <Link to="/">
-    <img src={logo} alt="logo" />
-  </Link>
+        <Link to="/">
+          <img src={logo} alt="logo" />
+        </Link>
 
-  <nav className="navbar">
-    <div className={mobileMenu ? "menu-open" : "menu-closed"}>
-      <ul>
-        <li>
-          <Link to="/" onClick={handleMobileMenu}>
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link to="/men" onClick={handleMobileMenu}>
-            Men
-          </Link>
-        </li>
-        <li>
-          <Link to="/women" onClick={handleMobileMenu}>
-            Women
-          </Link>
-        </li>
-      </ul>
-    </div>
-  </nav>
-    <Badge
-    badgeContent={cartItems.reduce(
-      (total, item) => total + item.quantity,
-      0
-    )}
-    color="primary"
-  >
-    <ShoppingBagIcon onClick={handleCartOpen} />
-  </Badge>
-  <div onClick={handleMobileMenu} className="mobile-menu">
-    {mobileMenu ? <CloseIcon /> : <MenuIcon />}
-  </div>
-
-</div>
+        <nav className="navbar">
+          <div className={mobileMenu ? "menu-open" : "menu-closed"}>
+            <ul>
+              <li>
+                <Link to="/" onClick={handleMobileMenu}>
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/men" onClick={handleMobileMenu}>
+                  Men
+                </Link>
+              </li>
+              <li>
+                <Link to="/women" onClick={handleMobileMenu}>
+                  Women
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <Badge
+          badgeContent={cartItems.reduce(
+            (total, item) => total + item.quantity,
+            0
+          )}
+          color="primary"
+        >
+          <ShoppingBagIcon onClick={handleCartOpen} className="shopping-bag" />
+        </Badge>
+        <div onClick={handleMobileMenu} className="mobile-menu">
+          {mobileMenu ? <CloseIcon /> : <MenuIcon />}
+        </div>
+      </div>
 
       {cartOpen && (
         <div className="cart-modal-container">
