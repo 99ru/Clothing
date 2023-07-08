@@ -135,11 +135,25 @@
   margin-top: 2rem;
 }
 
-.shopping-cart-icon {
-  font-size: 1.5rem !important;
+.total-container{
+ margin-top: 1rem;
+}
 
-  @media (max-width: 900px) {
-    font-size: 1.1rem !important;
+.checkout-button {
+  button {
+    margin-top: 1rem;
+    padding: 0.5rem 2rem;
+    border: none;
+    border-radius: 5px;
+    background-color: dodgerblue;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+
+    &:hover {
+      background-color: #0a529a;
+    }
   }
 }
 

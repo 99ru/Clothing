@@ -66,6 +66,10 @@ const CartModal = ({ closeModal }) => {
             <div className="total-container">
               <h3>Total: ${calculateTotal().toFixed(2)}</h3>
             </div>
+
+            <div className="checkout-button">
+            <button>Check out</button>
+            </div>
           </>
         )}
       </div>
