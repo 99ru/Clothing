@@ -53,6 +53,35 @@
   }
 }
 
+.hover-modal {
+  display: none; 
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem; 
+  background: rgba(0, 0, 0, 0.5); 
+  color: white; 
+  text-align: center; 
+}
+
+.item-container__a:hover .hover-modal {
+  display: block; 
+}
+
+.quick-add-to-cart {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: white; 
+  font-size: 1rem; 
+  transition: color 0.3s ease;
+  
+  &:active {
+    color: rgb(38, 161, 255);
+  }
+}
+
 .add-to-cart {
   cursor: pointer;
   position: absolute;
